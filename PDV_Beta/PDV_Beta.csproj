@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68EF60E7-5100-4675-8A3F-1192424B6CF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV_Beta</RootNamespace>
+    <AssemblyName>PDV_Beta</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Fernando\Desktop\PIZZARIA\PDV_Beta Pizzaria\Publicacao\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2E278F93C727398BD21FCE91593B5724B640D006</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PDV_Beta_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shopping cart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BuscaCepBLL.cs" />
+    <Compile Include="BLL\BuscaClienteFornecedorBLL.cs" />
+    <Compile Include="BLL\BuscaEntradasBLL.cs" />
+    <Compile Include="BLL\BuscaFuncionariosBLL.cs" />
+    <Compile Include="BLL\BuscaProdutosBLL.cs" />
+    <Compile Include="BLL\CadCaixaBLL.cs" />
+    <Compile Include="BLL\CadClientesFornecedoresBLL.cs" />
+    <Compile Include="BLL\CadFilialBLL.cs" />
+    <Compile Include="BLL\CadFuncionariosBLL.cs" />
+    <Compile Include="BLL\CadOperacoesBLL.cs" />
+    <Compile Include="BLL\CadProdutoT_T_S_BLL.cs" />
+    <Compile Include="BLL\CadProdutosBLL.cs" />
+    <Compile Include="BLL\CadEmpresaBLL.cs" />
+    <Compile Include="BLL\ConfImpressoraBLL.cs" />
+    <Compile Include="BLL\ConfTelaInicialBLL.cs" />
+    <Compile Include="BLL\ConfTelasVendasBLL.cs" />
+    <Compile Include="BLL\MovCaixaBLL.cs" />
+    <Compile Include="BLL\MovEntradasBLL.cs" />
+    <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\MovSaidasBLL.cs" />
+    <Compile Include="BLL\RelatoriosBLL.cs" />
+    <Compile Include="Component\Crypto.cs" />
+    <Compile Include="Component\LerArquivo.cs" />
+    <Compile Include="Component\TextInput.cs" />
+    <Compile Include="Component\ResizeIMG.cs" />
+    <Compile Include="DAO\BuscaCepDAO.cs" />
+    <Compile Include="DAO\BuscaClienteFornecedorDAO.cs" />
+    <Compile Include="DAO\BuscaEntradasDAO.cs" />
+    <Compile Include="DAO\BuscaFuncionariosDAO.cs" />
+    <Compile Include="DAO\BuscaProdutosDAO.cs" />
+    <Compile Include="DAO\CadCaixaDAO.cs" />
+    <Compile Include="DAO\CadClientesForncecedoresDAO.cs" />
+    <Compile Include="DAO\CadFilialDAO.cs" />
+    <Compile Include="DAO\CadFuncionariosDAO.cs" />
+    <Compile Include="DAO\CadOperacoesDAO.cs" />
+    <Compile Include="DAO\CadProdutoT_T_S_DAO.cs" />
+    <Compile Include="DAO\CadProdutosDAO.cs" />
+    <Compile Include="DAO\ConfImpressoraDAO.cs" />
+    <Compile Include="DAO\ConfTelaInicialDAO.cs" />
+    <Compile Include="DAO\ConfTelasVendasDAO.cs" />
+    <Compile Include="DAO\Connection.cs" />
+    <Compile Include="DAO\CadEmpresaDAO.cs" />
+    <Compile Include="DAO\MovCaixaDAO.cs" />
+    <Compile Include="DAO\MovEntradasDAO.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\MovSaidasDAO.cs" />
+    <Compile Include="DAO\RelatoriosDAO.cs" />
+    <Compile Include="Entity\Caixa.cs" />
+    <Compile Include="Entity\Caixa_Situacao.cs" />
+    <Compile Include="Entity\ConfiTxt.cs" />
+    <Compile Include="Entity\Empresa.cs" />
+    <Compile Include="Entity\Entradas.cs" />
+    <Compile Include="Entity\Entradas_Produtos.cs" />
+    <Compile Include="Entity\XImpressora.cs" />
+    <Compile Include="Entity\ProdutoSabor.cs" />
+    <Compile Include="Entity\ProdutoTamanho.cs" />
+    <Compile Include="Entity\ProdutoTipo.cs" />
+    <Compile Include="Entity\ProdutoTipoTamanhoPreco.cs" />
+    <Compile Include="Entity\Saida.cs" />
+    <Compile Include="Entity\Saidas_zConf.cs" />
+    <Compile Include="Entity\Saida_Produtos.cs" />
+    <Compile Include="Entity\XConfiguracoes.cs" />
+    <Compile Include="Interface\Ajuda\SuporteAjuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Ajuda\SuporteAjuda.Designer.cs">
+      <DependentUpon>SuporteAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaClienteFornecedor_Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaClienteFornecedor_Vendas.Designer.cs">
+      <DependentUpon>BuscaClienteFornecedor_Vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaEntradas.Designer.cs">
+      <DependentUpon>BuscaEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaFuncionarios.Designer.cs">
+      <DependentUpon>BuscaFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaProdutos.Designer.cs">
+      <DependentUpon>BuscaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaSaidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaSaidas.Designer.cs">
+      <DependentUpon>BuscaSaidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadCaixa.Designer.cs">
+      <DependentUpon>CadCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadEmpresa.Designer.cs">
+      <DependentUpon>CadEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadFilial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadFilial.Designer.cs">
+      <DependentUpon>CadFilial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadOperacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadOperacoes.Designer.cs">
+      <DependentUpon>CadOperacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoSabores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoSabores.Designer.cs">
+      <DependentUpon>CadProdutoSabores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTamanho.Designer.cs">
+      <DependentUpon>CadProdutoTamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTipo.Designer.cs">
+      <DependentUpon>CadProdutoTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTipoTamanhoPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutoTipoTamanhoPreco.Designer.cs">
+      <DependentUpon>CadProdutoTipoTamanhoPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfImpressoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfImpressoras.Designer.cs">
+      <DependentUpon>ConfImpressoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfTelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfTelaInicial.Designer.cs">
+      <DependentUpon>ConfTelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfTelasVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Configuracao\ConfTelasVendas.Designer.cs">
+      <DependentUpon>ConfTelasVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovCaixa.Designer.cs">
+      <DependentUpon>MovCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovEntradas.Designer.cs">
+      <DependentUpon>MovEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidaPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidaPizza.Designer.cs">
+      <DependentUpon>MovSaidaPizza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasCompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasCompleto.Designer.cs">
+      <DependentUpon>MovSaidasCompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasMercado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasMercado.Designer.cs">
+      <DependentUpon>MovSaidasMercado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidas_BuscaPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidas_BuscaPreco.Designer.cs">
+      <DependentUpon>MovSaidas_BuscaPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasPizzaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidasPizzaria.Designer.cs">
+      <DependentUpon>MovSaidasPizzaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidas_SetaEnderecoEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Movimento\MovSaidas_SetaEnderecoEntrega.Designer.cs">
+      <DependentUpon>MovSaidas_SetaEnderecoEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Caixa_Atual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Caixa_Atual.Designer.cs">
+      <DependentUpon>Rel_Caixa_Atual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Entregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Entregas.Designer.cs">
+      <DependentUpon>Rel_Entregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Relatorios\Rel_Vendas.Designer.cs">
+      <DependentUpon>Rel_Vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MP2032.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_Caixa_AtivoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Caixa_AtivoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_EntregalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_EntregalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_VendasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_VendasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguranca\Autenticacao.cs" />
+    <Compile Include="Entity\ClienteFornecedor.cs" />
+    <Compile Include="Entity\Endereco.cs" />
+    <Compile Include="Component\Erros.cs" />
+    <Compile Include="Entity\Filial.cs" />
+    <Compile Include="Entity\Funcionario.cs" />
+    <Compile Include="Entity\Operacoes.cs" />
+    <Compile Include="Entity\Produto.cs" />
+    <Compile Include="Interface\Buscas\BuscaCep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaCep.Designer.cs">
+      <DependentUpon>BuscaCep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Buscas\BuscaClienteFornecedor.Designer.cs">
+      <DependentUpon>BuscaClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadClientesFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadClientesFornecedores.Designer.cs">
+      <DependentUpon>CadClientesFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadFuncionarios.Designer.cs">
+      <DependentUpon>CadFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Cadastro\CadProdutos.Designer.cs">
+      <DependentUpon>CadProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Principal\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Principal\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Principal\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Principal\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface\Ajuda\SuporteAjuda.resx">
+      <DependentUpon>SuporteAjuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaCep.resx">
+      <DependentUpon>BuscaCep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaClienteFornecedor.resx">
+      <DependentUpon>BuscaClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaClienteFornecedor_Vendas.resx">
+      <DependentUpon>BuscaClienteFornecedor_Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaEntradas.resx">
+      <DependentUpon>BuscaEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaFuncionarios.resx">
+      <DependentUpon>BuscaFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaProdutos.resx">
+      <DependentUpon>BuscaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Buscas\BuscaSaidas.resx">
+      <DependentUpon>BuscaSaidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadCaixa.resx">
+      <DependentUpon>CadCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadClientesFornecedores.resx">
+      <DependentUpon>CadClientesFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadEmpresa.resx">
+      <DependentUpon>CadEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadFilial.resx">
+      <DependentUpon>CadFilial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadFuncionarios.resx">
+      <DependentUpon>CadFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadOperacoes.resx">
+      <DependentUpon>CadOperacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadProdutos.resx">
+      <DependentUpon>CadProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadProdutoSabores.resx">
+      <DependentUpon>CadProdutoSabores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadProdutoTamanho.resx">
+      <DependentUpon>CadProdutoTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadProdutoTipo.resx">
+      <DependentUpon>CadProdutoTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Cadastro\CadProdutoTipoTamanhoPreco.resx">
+      <DependentUpon>CadProdutoTipoTamanhoPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Configuracao\ConfImpressoras.resx">
+      <DependentUpon>ConfImpressoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Configuracao\ConfTelaInicial.resx">
+      <DependentUpon>ConfTelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Configuracao\ConfTelasVendas.resx">
+      <DependentUpon>ConfTelasVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovCaixa.resx">
+      <DependentUpon>MovCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovEntradas.resx">
+      <DependentUpon>MovEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidaPizza.resx">
+      <DependentUpon>MovSaidaPizza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidasMercado.resx">
+      <DependentUpon>MovSaidasMercado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidas_BuscaPreco.resx">
+      <DependentUpon>MovSaidas_BuscaPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidasPizzaria.resx">
+      <DependentUpon>MovSaidasPizzaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidas_SetaEnderecoEntrega.resx">
+      <DependentUpon>MovSaidas_SetaEnderecoEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Principal\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Movimento\MovSaidasCompleto.resx">
+      <DependentUpon>MovSaidasCompleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Principal\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Caixa_Atual.rdlc" />
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Caixa_Atual.resx">
+      <DependentUpon>Rel_Caixa_Atual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Entregas.rdlc" />
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Entregas.resx">
+      <DependentUpon>Rel_Entregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Vendas.resx">
+      <DependentUpon>Rel_Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Relatorios\Rel_Vendas.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="PDV_Beta_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico\3d bar chart.ico" />
+    <Content Include="ico\abort.ico" />
+    <Content Include="ico\about.ico" />
+    <Content Include="ico\add.ico" />
+    <Content Include="ico\anchor.ico" />
+    <Content Include="ico\application.ico" />
+    <Content Include="ico\apply.ico" />
+    <Content Include="ico\back.ico" />
+    <Content Include="ico\bad mark.ico" />
+    <Content Include="ico\blue key.ico" />
+    <Content Include="ico\blue tag.ico" />
+    <Content Include="ico\boss.ico" />
+    <Content Include="ico\bottom.ico" />
+    <Content Include="ico\calculator.ico" />
+    <Content Include="ico\calendar.ico" />
+    <Content Include="ico\car key.ico" />
+    <Content Include="ico\CD.ico" />
+    <Content Include="ico\clipboard.ico" />
+    <Content Include="ico\clock.ico" />
+    <Content Include="ico\close.ico" />
+    <Content Include="ico\compass.ico" />
+    <Content Include="ico\component.ico" />
+    <Content Include="ico\copy.ico" />
+    <Content Include="ico\create.ico" />
+    <Content Include="ico\cut.ico" />
+    <Content Include="ico\danger.ico" />
+    <Content Include="ico\database.ico" />
+    <Content Include="ico\delete.ico" />
+    <Content Include="ico\delivery.ico" />
+    <Content Include="ico\dial.ico" />
+    <Content Include="ico\disaster.ico" />
+    <Content Include="ico\dollar.ico" />
+    <Content Include="ico\down.ico" />
+    <Content Include="ico\download.ico" />
+    <Content Include="ico\e-mail.ico" />
+    <Content Include="ico\eject.ico" />
+    <Content Include="ico\erase.ico" />
+    <Content Include="ico\error.ico" />
+    <Content Include="ico\euro.ico" />
+    <Content Include="ico\exit.ico" />
+    <Content Include="ico\fall.ico" />
+    <Content Include="ico\fast-forward.ico" />
+    <Content Include="ico\favourites.ico" />
+    <Content Include="ico\female.ico" />
+    <Content Include="ico\filter.ico" />
+    <Content Include="ico\find.ico" />
+    <Content Include="ico\first record.ico" />
+    <Content Include="ico\first.ico" />
+    <Content Include="ico\flag.ico" />
+    <Content Include="ico\folder.ico" />
+    <Content Include="ico\forbidden.ico" />
+    <Content Include="ico\forward.ico" />
+    <Content Include="ico\free bsd.ico" />
+    <Content Include="ico\go back.ico" />
+    <Content Include="ico\go forward.ico" />
+    <Content Include="ico\go.ico" />
+    <Content Include="ico\good-mark.ico" />
+    <Content Include="ico\green tag.ico" />
+    <Content Include="ico\heart.ico" />
+    <Content Include="ico\help book 3d.ico" />
+    <Content Include="ico\help book.ico" />
+    <Content Include="ico\help.ico" />
+    <Content Include="ico\hint.ico" />
+    <Content Include="ico\home.ico" />
+    <Content Include="ico\how-to.ico" />
+    <Content Include="ico\hungup.ico" />
+    <Content Include="ico\info.ico" />
+    <Content Include="ico\key.ico" />
+    <Content Include="ico\last recor.ico" />
+    <Content Include="ico\last.ico" />
+    <Content Include="ico\left-right.ico" />
+    <Content Include="ico\lightning.ico" />
+    <Content Include="ico\linux.ico" />
+    <Content Include="ico\list.ico" />
+    <Content Include="ico\load.ico" />
+    <Content Include="ico\lock.ico" />
+    <Content Include="ico\low rating.ico" />
+    <Content Include="ico\mail.ico" />
+    <Content Include="ico\male.ico" />
+    <Content Include="ico\medium rating.ico" />
+    <Content Include="ico\message.ico" />
+    <Content Include="ico\mobile-phone.ico" />
+    <Content Include="ico\modify.ico" />
+    <Content Include="ico\movie.ico" />
+    <Content Include="ico\music.ico" />
+    <Content Include="ico\new document.ico" />
+    <Content Include="ico\new.ico" />
+    <Content Include="ico\next track.ico" />
+    <Content Include="ico\next.ico" />
+    <Content Include="ico\no-entry.ico" />
+    <Content Include="ico\no.ico" />
+    <Content Include="ico\notes.ico" />
+    <Content Include="ico\OK.ico" />
+    <Content Include="ico\paste.ico" />
+    <Content Include="ico\pause.ico" />
+    <Content Include="ico\people.ico" />
+    <Content Include="ico\person.ico" />
+    <Content Include="ico\phone number.ico" />
+    <Content Include="ico\pie chart.ico" />
+    <Content Include="ico\pinion.ico" />
+    <Content Include="ico\play-music.ico" />
+    <Content Include="ico\play.ico" />
+    <Content Include="ico\playback.ico" />
+    <Content Include="ico\previous record.ico" />
+    <Content Include="ico\previous.ico" />
+    <Content Include="ico\problem.ico" />
+    <Content Include="ico\question.ico" />
+    <Content Include="ico\raise.ico" />
+    <Content Include="ico\record.ico" />
+    <Content Include="ico\red mark.ico" />
+    <Content Include="ico\red star.ico" />
+    <Content Include="ico\red tag.ico" />
+    <Content Include="ico\redo.ico" />
+    <Content Include="ico\refresh.ico" />
+    <Content Include="ico\remove.ico" />
+    <Content Include="ico\repair.ico" />
+    <Content Include="ico\report.ico" />
+    <Content Include="ico\retort.ico" />
+    <Content Include="ico\rewind.ico" />
+    <Content Include="ico\sad.ico" />
+    <Content Include="ico\save.ico" />
+    <Content Include="ico\search.ico" />
+    <Content Include="ico\shopping cart.ico" />
+    <Content Include="ico\smile.ico" />
+    <Content Include="ico\sound.ico" />
+    <Content Include="ico\stop sign.ico" />
+    <Content Include="ico\stop.ico" />
+    <Content Include="ico\sync.ico" />
+    <Content Include="ico\table.ico" />
+    <Content Include="ico\target.ico" />
+    <Content Include="ico\taxi.ico" />
+    <Content Include="ico\terminate.ico" />
+    <Content Include="ico\text preview.ico" />
+    <Content Include="ico\text.ico" />
+    <Content Include="ico\thumbs down.ico" />
+    <Content Include="ico\thumbs up.ico" />
+    <Content Include="ico\top.ico" />
+    <Content Include="ico\turn off.ico" />
+    <Content Include="ico\undo.ico" />
+    <Content Include="ico\unlock.ico" />
+    <Content Include="ico\up-down.ico" />
+    <Content Include="ico\up.ico" />
+    <Content Include="ico\update.ico" />
+    <Content Include="ico\upload.ico" />
+    <Content Include="ico\user group.ico" />
+    <Content Include="ico\view.ico" />
+    <Content Include="ico\warning.ico" />
+    <Content Include="ico\wrench.ico" />
+    <Content Include="ico\yes.ico" />
+    <Content Include="ico\zoom.ico" />
+    <Content Include="Imagens\PIZZAIOLO.png" />
+    <Content Include="png\24x24\3d bar chart.png" />
+    <Content Include="png\24x24\Abort.png" />
+    <Content Include="png\24x24\About.png" />
+    <Content Include="png\24x24\Add.png" />
+    <Content Include="png\24x24\Anchor.png" />
+    <Content Include="png\24x24\Application.png" />
+    <Content Include="png\24x24\Apply.png" />
+    <Content Include="png\24x24\Back.png" />
+    <Content Include="png\24x24\Bad mark.png" />
+    <Content Include="png\24x24\Blue key.png" />
+    <Content Include="png\24x24\Blue tag.png" />
+    <Content Include="png\24x24\Boss.png" />
+    <Content Include="png\24x24\Bottom.png" />
+    <Content Include="png\24x24\Calculator.png" />
+    <Content Include="png\24x24\Calendar.png" />
+    <Content Include="png\24x24\Car key.png" />
+    <Content Include="png\24x24\CD.png" />
+    <Content Include="png\24x24\Clipboard.png" />
+    <Content Include="png\24x24\Clock.png" />
+    <Content Include="png\24x24\Close.png" />
+    <Content Include="png\24x24\Compass.png" />
+    <Content Include="png\24x24\Component.png" />
+    <Content Include="png\24x24\Copy.png" />
+    <Content Include="png\24x24\Create.png" />
+    <Content Include="png\24x24\Cut.png" />
+    <Content Include="png\24x24\Danger.png" />
+    <Content Include="png\24x24\Database.png" />
+    <Content Include="png\24x24\Delete.png" />
+    <Content Include="png\24x24\Delivery.png" />
+    <Content Include="png\24x24\Dial.png" />
+    <Content Include="png\24x24\Disaster.png" />
+    <Content Include="png\24x24\Dollar.png" />
+    <Content Include="png\24x24\Down.png" />
+    <Content Include="png\24x24\Download.png" />
+    <Content Include="png\24x24\E-mail.png" />
+    <Content Include="png\24x24\Eject.png" />
+    <Content Include="png\24x24\Erase.png" />
+    <Content Include="png\24x24\Error.png" />
+    <Content Include="png\24x24\Euro.png" />
+    <Content Include="png\24x24\Exit.png" />
+    <Content Include="png\24x24\Fall.png" />
+    <Content Include="png\24x24\Fast-forward.png" />
+    <Content Include="png\24x24\Favourites.png" />
+    <Content Include="png\24x24\Female.png" />
+    <Content Include="png\24x24\Filter.png" />
+    <Content Include="png\24x24\Find.png" />
+    <Content Include="png\24x24\First record.png" />
+    <Content Include="png\24x24\First.png" />
+    <Content Include="png\24x24\Flag.png" />
+    <Content Include="png\24x24\Folder.png" />
+    <Content Include="png\24x24\Forbidden.png" />
+    <Content Include="png\24x24\Forward.png" />
+    <Content Include="png\24x24\Free bsd.png" />
+    <Content Include="png\24x24\Go back.png" />
+    <Content Include="png\24x24\Go forward.png" />
+    <Content Include="png\24x24\Go.png" />
+    <Content Include="png\24x24\Good-mark.png" />
+    <Content Include="png\24x24\Green tag.png" />
+    <Content Include="png\24x24\Heart.png" />
+    <Content Include="png\24x24\Help book 3d.png" />
+    <Content Include="png\24x24\Help book.png" />
+    <Content Include="png\24x24\Help.png" />
+    <Content Include="png\24x24\Hint.png" />
+    <Content Include="png\24x24\Home.png" />
+    <Content Include="png\24x24\How-to.png" />
+    <Content Include="png\24x24\Hungup.png" />
+    <Content Include="png\24x24\Info.png" />
+    <Content Include="png\24x24\Key.png" />
+    <Content Include="png\24x24\Last recor.png" />
+    <Content Include="png\24x24\Last.png" />
+    <Content Include="png\24x24\Left-right.png" />
+    <Content Include="png\24x24\Lightning.png" />
+    <Content Include="png\24x24\Linux.png" />
+    <Content Include="png\24x24\List.png" />
+    <Content Include="png\24x24\Load.png" />
+    <Content Include="png\24x24\Lock.png" />
+    <Content Include="png\24x24\Low rating.png" />
+    <Content Include="png\24x24\Mail.png" />
+    <Content Include="png\24x24\Male.png" />
+    <Content Include="png\24x24\Medium rating.png" />
+    <Content Include="png\24x24\Message.png" />
+    <Content Include="png\24x24\Mobile-phone.png" />
+    <Content Include="png\24x24\Modify.png" />
+    <Content Include="png\24x24\Movie.png" />
+    <Content Include="png\24x24\Music.png" />
+    <Content Include="png\24x24\New document.png" />
+    <Content Include="png\24x24\New.png" />
+    <Content Include="png\24x24\Next track.png" />
+    <Content Include="png\24x24\Next.png" />
+    <Content Include="png\24x24\No-entry.png" />
+    <Content Include="png\24x24\No.png" />
+    <Content Include="png\24x24\Notes.png" />
+    <Content Include="png\24x24\OK.png" />
+    <Content Include="png\24x24\Paste.png" />
+    <Content Include="png\24x24\Pause.png" />
+    <Content Include="png\24x24\People.png" />
+    <Content Include="png\24x24\Person.png" />
+    <Content Include="png\24x24\Phone number.png" />
+    <Content Include="png\24x24\Pie chart.png" />
+    <Content Include="png\24x24\Pinion.png" />
+    <Content Include="png\24x24\Play-music.png" />
+    <Content Include="png\24x24\Play.png" />
+    <Content Include="png\24x24\Playback.png" />
+    <Content Include="png\24x24\Previous record.png" />
+    <Content Include="png\24x24\Previous.png" />
+    <Content Include="png\24x24\Problem.png" />
+    <Content Include="png\24x24\Question.png" />
+    <Content Include="png\24x24\Raise.png" />
+    <Content Include="png\24x24\Record.png" />
+    <Content Include="png\24x24\Red mark.png" />
+    <Content Include="png\24x24\Red star.png" />
+    <Content Include="png\24x24\Red tag.png" />
+    <Content Include="png\24x24\Redo.png" />
+    <Content Include="png\24x24\Refresh.png" />
+    <Content Include="png\24x24\Remove.png" />
+    <Content Include="png\24x24\Repair.png" />
+    <Content Include="png\24x24\Report.png" />
+    <Content Include="png\24x24\Retort.png" />
+    <Content Include="png\24x24\Rewind.png" />
+    <Content Include="png\24x24\Sad.png" />
+    <Content Include="png\24x24\Save.png" />
+    <Content Include="png\24x24\Search.png" />
+    <Content Include="png\24x24\Shopping cart.png" />
+    <Content Include="png\24x24\Smile.png" />
+    <Content Include="png\24x24\Sound.png" />
+    <Content Include="png\24x24\Stop sign.png" />
+    <Content Include="png\24x24\Stop.png" />
+    <Content Include="png\24x24\Sync.png" />
+    <Content Include="png\24x24\Table.png" />
+    <Content Include="png\24x24\Target.png" />
+    <Content Include="png\24x24\Taxi.png" />
+    <Content Include="png\24x24\Terminate.png" />
+    <Content Include="png\24x24\Text preview.png" />
+    <Content Include="png\24x24\Text.png" />
+    <Content Include="png\24x24\Thumbs down.png" />
+    <Content Include="png\24x24\Thumbs up.png" />
+    <Content Include="png\24x24\Top.png" />
+    <Content Include="png\24x24\Turn off.png" />
+    <Content Include="png\24x24\Undo.png" />
+    <Content Include="png\24x24\Unlock.png" />
+    <Content Include="png\24x24\Up-down.png" />
+    <Content Include="png\24x24\Up.png" />
+    <Content Include="png\24x24\Update.png" />
+    <Content Include="png\24x24\Upload.png" />
+    <Content Include="png\24x24\User group.png" />
+    <Content Include="png\24x24\View.png" />
+    <Content Include="png\24x24\Warning.png" />
+    <Content Include="png\24x24\Wrench.png" />
+    <Content Include="png\24x24\Yes.png" />
+    <Content Include="png\24x24\Zoom.png" />
+    <None Include="png\32x32\accept.png" />
+    <None Include="png\32x32\add.png" />
+    <None Include="png\32x32\application.png" />
+    <None Include="png\32x32\application_add.png" />
+    <None Include="png\32x32\application_edit.png" />
+    <None Include="png\32x32\application_lock.png" />
+    <None Include="png\32x32\application_next.png" />
+    <None Include="png\32x32\application_remove.png" />
+    <None Include="png\32x32\application_up.png" />
+    <None Include="png\32x32\applications.png" />
+    <None Include="png\32x32\archive.png" />
+    <None Include="png\32x32\attachment.png" />
+    <None Include="png\32x32\back.png" />
+    <None Include="png\32x32\calculator.png" />
+    <None Include="png\32x32\calculator_accept.png" />
+    <None Include="png\32x32\calculator_add.png" />
+    <None Include="png\32x32\calculator_remove.png" />
+    <None Include="png\32x32\cd.png" />
+    <None Include="png\32x32\cd_accept.png" />
+    <None Include="png\32x32\cd_add.png" />
+    <None Include="png\32x32\cd_down.png" />
+    <None Include="png\32x32\cd_remove.png" />
+    <None Include="png\32x32\chart.png" />
+    <None Include="png\32x32\chart_accept.png" />
+    <None Include="png\32x32\chart_add.png" />
+    <None Include="png\32x32\chart_remove.png" />
+    <None Include="png\32x32\clock.png" />
+    <None Include="png\32x32\comment.png" />
+    <None Include="png\32x32\comment_add.png" />
+    <None Include="png\32x32\comment_edit.png" />
+    <None Include="png\32x32\comment_remove.png" />
+    <None Include="png\32x32\comments.png" />
+    <None Include="png\32x32\comments_add.png" />
+    <None Include="png\32x32\comments_remove.png" />
+    <None Include="png\32x32\computer.png" />
+    <None Include="png\32x32\computer_accept.png" />
+    <None Include="png\32x32\computer_remove.png" />
+    <None Include="png\32x32\computers.png" />
+    <None Include="png\32x32\database.png" />
+    <None Include="png\32x32\database_accept.png" />
+    <None Include="png\32x32\database_add.png" />
+    <None Include="png\32x32\database_down.png" />
+    <None Include="png\32x32\database_lock.png" />
+    <None Include="png\32x32\database_next.png" />
+    <None Include="png\32x32\database_previous.png" />
+    <None Include="png\32x32\database_process.png" />
+    <None Include="png\32x32\database_remove.png" />
+    <None Include="png\32x32\database_search.png" />
+    <None Include="png\32x32\database_up.png" />
+    <None Include="png\32x32\down.png" />
+    <None Include="png\32x32\eject.png" />
+    <None Include="png\32x32\fast_forward.png" />
+    <None Include="png\32x32\favorite.png" />
+    <None Include="png\32x32\favorite_add.png" />
+    <None Include="png\32x32\favorite_remove.png" />
+    <None Include="png\32x32\folder.png" />
+    <None Include="png\32x32\folder_accept.png" />
+    <None Include="png\32x32\folder_add.png" />
+    <None Include="png\32x32\folder_down.png" />
+    <None Include="png\32x32\folder_edit.png" />
+    <None Include="png\32x32\folder_next.png" />
+    <None Include="png\32x32\folder_previous.png" />
+    <None Include="png\32x32\folder_process.png" />
+    <None Include="png\32x32\folder_remove.png" />
+    <None Include="png\32x32\folder_up.png" />
+    <None Include="png\32x32\help.png" />
+    <None Include="png\32x32\home.png" />
+    <None Include="png\32x32\home_next.png" />
+    <None Include="png\32x32\image.png" />
+    <None Include="png\32x32\image_add.png" />
+    <None Include="png\32x32\image_edit.png" />
+    <None Include="png\32x32\image_lock.png" />
+    <None Include="png\32x32\image_multi.png" />
+    <None Include="png\32x32\image_next.png" />
+    <None Include="png\32x32\image_remove.png" />
+    <None Include="png\32x32\image_up.png" />
+    <None Include="png\32x32\info.png" />
+    <None Include="png\32x32\lock.png" />
+    <None Include="png\32x32\lock_disabled.png" />
+    <None Include="png\32x32\lock_off.png" />
+    <None Include="png\32x32\lock_off_disabled.png" />
+    <None Include="png\32x32\mail.png" />
+    <None Include="png\32x32\mail_accept.png" />
+    <None Include="png\32x32\mail_add.png" />
+    <None Include="png\32x32\mail_edit.png" />
+    <None Include="png\32x32\mail_next.png" />
+    <None Include="png\32x32\mail_remove.png" />
+    <None Include="png\32x32\movie_track.png" />
+    <None Include="png\32x32\movie_track_add.png" />
+    <None Include="png\32x32\movie_track_next.png" />
+    <None Include="png\32x32\movie_track_remove.png" />
+    <None Include="png\32x32\next.png" />
+    <None Include="png\32x32\note_accept.png" />
+    <None Include="png\32x32\note_add.png" />
+    <None Include="png\32x32\note_edit.png" />
+    <None Include="png\32x32\note_remove.png" />
+    <None Include="png\32x32\notes_edit.png" />
+    <None Include="png\32x32\page.png" />
+    <None Include="png\32x32\page_accept.png" />
+    <None Include="png\32x32\page_add.png" />
+    <None Include="png\32x32\page_down.png" />
+    <None Include="png\32x32\page_edit.png" />
+    <None Include="png\32x32\page_next.png" />
+    <None Include="png\32x32\page_previous.png" />
+    <None Include="png\32x32\page_process.png" />
+    <None Include="png\32x32\page_remove.png" />
+    <None Include="png\32x32\page_search.png" />
+    <None Include="png\32x32\page_up.png" />
+    <None Include="png\32x32\pause.png" />
+    <None Include="png\32x32\pdf.png" />
+    <None Include="png\32x32\play.png" />
+    <None Include="png\32x32\printer.png" />
+    <None Include="png\32x32\printer_search.png" />
+    <None Include="png\32x32\process.png" />
+    <None Include="png\32x32\process_accept.png" />
+    <None Include="png\32x32\process_add.png" />
+    <None Include="png\32x32\process_remove.png" />
+    <None Include="png\32x32\record.png" />
+    <None Include="png\32x32\remove.png" />
+    <None Include="png\32x32\repeat.png" />
+    <None Include="png\32x32\rewind.png" />
+    <None Include="png\32x32\rss.png" />
+    <None Include="png\32x32\rss_add.png" />
+    <None Include="png\32x32\rss_edit.png" />
+    <None Include="png\32x32\rss_next.png" />
+    <None Include="png\32x32\rss_remove.png" />
+    <None Include="png\32x32\search.png" />
+    <None Include="png\32x32\search_add.png" />
+    <None Include="png\32x32\search_remove.png" />
+    <None Include="png\32x32\she_user.png" />
+    <None Include="png\32x32\she_user_accept.png" />
+    <None Include="png\32x32\she_user_add.png" />
+    <None Include="png\32x32\she_user_remove.png" />
+    <None Include="png\32x32\she_users.png" />
+    <None Include="png\32x32\shopping_cart.png" />
+    <None Include="png\32x32\shopping_cart_accept.png" />
+    <None Include="png\32x32\shopping_cart_down.png" />
+    <None Include="png\32x32\shopping_cart_remove.png" />
+    <None Include="png\32x32\shopping_cart_up.png" />
+    <None Include="png\32x32\skip_backward.png" />
+    <None Include="png\32x32\skip_forward.png" />
+    <None Include="png\32x32\sound.png" />
+    <None Include="png\32x32\sound_off.png" />
+    <None Include="png\32x32\sound_on.png" />
+    <None Include="png\32x32\stop.png" />
+    <None Include="png\32x32\up.png" />
+    <None Include="png\32x32\user.png" />
+    <None Include="png\32x32\user_accept.png" />
+    <None Include="png\32x32\user_add.png" />
+    <None Include="png\32x32\user_remove.png" />
+    <None Include="png\32x32\users.png" />
+    <None Include="png\32x32\window.png" />
+    <None Include="png\32x32\window_add.png" />
+    <None Include="png\32x32\window_edit.png" />
+    <None Include="png\32x32\window_lock.png" />
+    <None Include="png\32x32\window_next.png" />
+    <None Include="png\32x32\window_remove.png" />
+    <None Include="png\32x32\window_up.png" />
+    <None Include="png\32x32\windows.png" />
+    <None Include="png\32x32\word.png" />
+    <Content Include="shopping cart.ico" />
+    <None Include="Rel_Caixa_AtivoDataSet.xsc">
+      <DependentUpon>Rel_Caixa_AtivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_Caixa_AtivoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_Caixa_AtivoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_Caixa_AtivoDataSet.xss">
+      <DependentUpon>Rel_Caixa_AtivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_EntregalDataSet.xsc">
+      <DependentUpon>Rel_EntregalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_EntregalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_EntregalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_EntregalDataSet.xss">
+      <DependentUpon>Rel_EntregalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_VendasDataSet.xsc">
+      <DependentUpon>Rel_VendasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_VendasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_VendasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_VendasDataSet.xss">
+      <DependentUpon>Rel_VendasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\56216_Papel-de-Parede-Fundo-Azul--56216_1366x768.jpg" />
+    <None Include="png\pizza.png" />
+    <None Include="png\no_image_180x150.png" />
+    <None Include="png\no_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,90 @@
+;===============================================================
+; Logic Controls Thermal Printer LR3000 Driver
+; for Windows XP/Vista
+; Copyright (c) 2008, Logic Controls, Inc.
+;
+; Model: LR3000
+; Driver type: USB device port with virtual serial port
+;
+;===============================================================
+
+[Version]
+Signature=$WINDOWS NT$
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%MFGNAME%
+DriverVer=12/05/2008,3.1.0.12
+CatalogFile = LciLR3USB.cat
+;---------------------------------------------------------------;
+
+[Manufacturer]
+%MFGNAME%=DeviceList, NTamd64
+
+[DestinationDirs]
+DefaultDestDir=10		;System32\Drivers
+DriverCopyFiles=10		,System32\Drivers
+
+[SourceDisksNames.x86]
+1=%INSTDISK%,,,
+
+[SourceDisksFiles.x86]
+LciPrnUSB.sys=1,\x86
+SiLib.sys=1,\x86
+
+[SourceDisksNames.amd64]
+1=%INSTDISK%,,,
+
+[SourceDisksFiles.amd64]
+LciPrnUSB.sys=1,\x64
+SiLib.sys=1,\x64
+
+[DeviceList]
+%DESCRIPTION%=DriverInstall,USB\VID_0FA8&PID_8030
+
+[DeviceList.NTamd64]
+%DESCRIPTION%=DriverInstall,USB\VID_0FA8&PID_8030
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+;------------------------------------------------------------------------------
+;  Windows 2000 Sections
+;------------------------------------------------------------------------------
+
+
+[DriverInstall.NT]
+CopyFiles=DriverCopyFiles
+
+[DriverCopyFiles]
+LciPrnUSB.sys,,,2
+SiLib.sys,,,2
+
+[DriverInstall.NT.Services]
+AddService=LciPrnUSB,2,DriverService
+
+[DriverService]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%10%\system32\drivers\LciPrnUSB.sys
+
+[DriverInstall.nt.hw]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+HKR,,FriendlyName,,%FRIENDLYNAME%
+
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+MFGNAME="Logic Controls, Inc."
+INSTDISK="Logic Controls Thermal Printer LR3000 Driver Installation Disc"
+DESCRIPTION="Logic Controls Thermal Printer LR3000"
+FRIENDLYNAME="Logic Controls Thermal Printer LR3000"
+
+
+
+
